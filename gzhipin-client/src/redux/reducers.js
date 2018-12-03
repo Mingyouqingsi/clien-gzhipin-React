@@ -12,7 +12,7 @@ function xxx(previousState = initXxxState,action) {
   }
 }
 const initYyyState  = 0
-function yyy(previousState = initXxxState,action) {
+function yyy(previousState = initYyyState,action) {
   switch (action.type){
     default:
       return previousState
