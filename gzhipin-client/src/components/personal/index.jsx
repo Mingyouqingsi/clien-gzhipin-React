@@ -8,19 +8,20 @@ const alert = Modal.alert;
 
 class Personal extends Component {
 
-  // logout = () => {
-  //   alert('退出登录', '你确定要退出登录吗???', [
-  //     { text: '取消', onPress: () => {} },
-  //     { text: '确认', onPress: () => {
-  //       //清除cookie
-  //       Cookies.remove('userid');
-  //       //清除redux管理数据
-  //
-  //       //跳转到登录页面
-  //       this.props.history.replace('/login');
-  //     }},
-  //   ])
-  // }
+
+  logout = () => {
+    alert('退出登录', '你确定要退出登录吗???', [
+      { text: '取消', onPress: () => {} },
+      { text: '确认', onPress: () => {
+        //清除cookie
+        Cookies.remove('userid');
+        //清除redux管理数据
+
+        //跳转到登录页面
+        this.props.history.replace('/login');
+      }},
+    ])
+  }
 
   render () {
     return (
