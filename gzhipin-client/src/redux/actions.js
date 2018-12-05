@@ -79,9 +79,9 @@ export const update = ({header, post, company, salary, info ,type}) => {
     return authError({errMsg: '请选择头像'});
   } else if (!post) {
     return authError({errMsg: type === 'laoban' ? '请填写招聘职位' : '请填写求职岗位'});
-  } else if (!company) {
+  } else if (type === 'laoban' && !company) {
     return authError({errMsg: '请填写公司名称'});
-  } else if (!salary) {
+  } else if (type === 'laoban' && !salary) {
     return authError({errMsg: '请填写职位薪资'});
   } else if (!info) {
     return authError({errMsg: type === 'laoban' ? '请填写招聘职位' : '请填写求职岗位'});
